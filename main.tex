@@ -1,0 +1,94 @@
+\documentclass{paper}
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{listings}
+
+\usepackage[unicode,pdfencoding=auto]{hyperref}
+\usepackage[hyperref, UTF8]{ctex}
+
+\geometry{left=2.5cm, right=2.5cm, top=3.6cm, bottom=3.6cm}
+\setmainfont{Monaco}
+
+\hypersetup{colorlinks=true,linkcolor=black}
+
+
+\begin{document}
+
+\begin{titlepage}
+	\centering
+	\vfill
+	{\bfseries\Huge
+		Golang 最佳实践\\
+		\vskip1cm
+		\Large
+		袁胜 \\
+	}
+	\vfill
+	\includegraphics[width=8cm]{golang.png} % also works with logo.pdf
+	\vfill
+	\vfill
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{指导原则}
+
+\subsection{简单性}
+
+\subsection{可读性}
+
+\subsection{生产力}
+
+
+\section{标识符}
+
+\subsection{选择标识是为了清晰, 而不是简洁}
+
+\subsection{标识符长度}
+
+\subsection{不要用变量类型命名变量}
+
+\subsection{使用一致的命名风格}
+
+\subsection{使用一致的声明样式}
+
+\subsection{成为团队的合作者}
+
+\section{注释}
+
+\subsection{关于变量和常量的注释应描述其内容而非其目的 }
+\subsection{公共符号始终要注释}
+
+\section{包的设计}
+
+\subsection{一个好的包从它的名字开始}
+\subsection{避免使用类似 base、 common或 util的包名称}
+\subsection{尽早 return而不是深度嵌套}
+\subsection{让零值更有用}
+\subsection{避免包级别状态}
+
+\section{项目结构}
+
+\subsection{考虑更少，更大的包}
+\subsection{保持 main包内容尽可能的少}
+
+\section{API 设计}
+
+\subsection{设计难以被误用的 API}
+\subsection{为其默认用例设计 API}
+\subsection{让函数定义它们所需的行为}
+
+\section{错误处理}
+
+\subsection{通过消除错误来消除错误处理}
+\subsection{错误只处理一次}
+
+\section{并发}
+\subsection{保持自己忙碌或做自己的工作}
+\subsection{将并发性留给调用者}
+\subsection{永远不要启动一个停止不了的 goroutine}
+
+\end{document}
