@@ -3,6 +3,7 @@
 \usepackage{fontspec}
 \usepackage{geometry}
 \usepackage{listings}
+\usepackage{graphicx}
 
 \usepackage[unicode,pdfencoding=auto]{hyperref}
 \usepackage[hyperref, UTF8]{ctex}
@@ -25,14 +26,15 @@
 		袁胜 \\
 	}
 	\vfill
-	\includegraphics[width=8cm]{golang.png} % also works with logo.pdf
+	
+	\includegraphics[width=8cm]{gopher_dart.png} % also works with logo.pdf
 	\vfill
 	\vfill
 \end{titlepage}
 
 \tableofcontents
 
-\newpage
+%\newpage
 
 \section{指导原则}
 
@@ -75,6 +77,8 @@
 \subsection{考虑更少，更大的包}
 \subsection{保持 main包内容尽可能的少}
 
+\newpage
+
 \section{API 设计}
 
 \subsection{设计难以被误用的 API}
@@ -90,5 +94,19 @@
 \subsection{保持自己忙碌或做自己的工作}
 \subsection{将并发性留给调用者}
 \subsection{永远不要启动一个停止不了的 goroutine}
+
+\section{Code Review}
+
+为什么要代码评审？
+如果代码评审是要捕捉糟糕的代码，那么你如何知道你审查的代码是好的还是糟糕的？
+
+\begin{itemize}
+	\item Single Responsibility Principle -（单一功能原则）
+	\item Open / Closed Principle -（开闭原则）
+	\item Liskov Substitution Principle -（里氏替换原则）
+	\item Interface Segregation Principle -（接口隔离原则）
+	\item Dependency Inversion Principle -（依赖反转原则）
+\end{itemize}
+
 
 \end{document}
